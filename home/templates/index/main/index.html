@@ -1,0 +1,45 @@
+{% load static %}
+<h1 style="font-family:impact; margin-top: 30px;">Trending shoes:</h1></br>
+<div class="card-list">
+    {% for i in trend%}
+    <div class="card margin">
+        <div class="card__thumbnail image">
+            <img src="/media/{{i.Image}}" alt="">
+        </div>
+        <div class="card__info">
+            <span class="name">{{i.Name}}</span>
+            <span class="email">{{i.Price}}</span>
+        </div>
+        <div class="card__btn">
+        <a href="/View/{{i.id}}" class="btn btn__view">
+            <span class="btn__icon"><i class="fa fa-eye" aria-hidden="true"></i></span>
+            <span class="btn__name">View</span>
+        </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+        
+        
+<h1 style="font-family:impact; margin-top: 30px;">Custom and Recycling shoes:</h1></br>
+<div class="card-list">
+    {% for i in recycling%}
+    <div class="card margin">
+        <div class="cardi.__thumbnail image">
+            <img src="/media/{{i.Image}}" alt="">
+        </div>
+        <div class="card__info">
+            <span class="name">{{i.Name}}</span>
+            <span class="email">{{i.Price}}$</span>
+        </div>
+        <div class="card__btn">
+        <a href="index.php?manage=detail" class="btn btn__view">
+            <span class="btn__icon"><i class="fa fa-eye" aria-hidden="true"></i></span>
+            <span class="btn__name">View</span>
+        </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+            

@@ -1,0 +1,45 @@
+<div id="main">
+            <?php
+                if(isset($_GET['manage'])){
+                    $tam =$_GET['manage'];
+                } else{
+                    $tam = '';
+                }
+                if($tam=='Sale'){
+                    include("main/sale.php");
+                } elseif($tam=='Men'){
+                    include("main/Men.php");
+                }elseif($tam=='Women'){
+                    include("main/Women.php");
+                }elseif($tam=='About_us'){
+                    include("main/about_us.php");
+                }elseif($tam=='detail'){
+                    include("main/detail_product.php");
+                }else{
+                    include("main/index.php");
+                }
+                
+            ?>
+    {% if page == 'index' %}
+        {% include 'index/main/index.html' %}  
+    {% endif %}   
+    {% if page == 'sale' %}
+        {% include 'index/main/sale.html' %}  
+    {% endif %} 
+    {% if page == 'man' %}
+        {% include 'index/main/man.html' %}  
+    {% endif %}  
+    {% if page == 'women' %}
+        {% include 'index/main/women.html' %}  
+    {% endif %}   
+    {% if page == 'home' %}
+        {% include 'index/main/index.html' %}  
+    {% endif %}
+    {% if page == 'about_us' %}
+        {% include 'index/main/about_us.html' %}  
+    {% endif %}
+    {% if page == 'detail_product' %}
+        {% include 'index/main/detail_product.html' %}  
+    {% endif %}
+         
+</div>
